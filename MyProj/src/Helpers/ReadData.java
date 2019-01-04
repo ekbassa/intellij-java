@@ -15,10 +15,12 @@ import java.io.IOException;
 public class ReadData {
     private static WebDriver driver;
 
+    public static String configFilePath ="E:\\Users\\Bassam\\Documents\\Training\\Xml\\Config.xml";
+    public static String namesFilePath  = "E:\\Users\\Bassam\\Documents\\Training\\Xml\\Names.xml";
 
-    public static String getData (String keyName) throws ParserConfigurationException,
+    public static String getData (String keyName,String filePath) throws ParserConfigurationException,
             IOException, SAXException, org.xml.sax.SAXException {
-        File configXmlFile = new File("E:\\Users\\Bassam\\Documents\\Training\\Xml\\Config.xml");
+        File configXmlFile = new File(filePath);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = null;
         dBuilder = dbFactory.newDocumentBuilder();
